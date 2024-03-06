@@ -10,9 +10,18 @@ cron.schedule('* * * * *', async () => {
   try {
     // Make a request to the specified URL
     const response = await axios.get('https://job-quest.onrender.com/all-jobs');
+    console.log(response);
     console.log(`Job executed at ${new Date().toISOString()}. Status code: ${response.status}`);
   } catch (error) {
     console.error(`Error occurred: ${error.message}`);
+  }
+});
+
+app.get('/internships', async (req, res) => {
+  try {
+    console.log("hello from always up");
+  } catch (error) {
+    console.log(error);
   }
 });
 
