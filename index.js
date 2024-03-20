@@ -18,7 +18,7 @@ cron.schedule('* * * * *', async () => {
     const selfResponse = await axios.get("https://always-up.onrender.com/internships");
     const responseofCoalesce = await axios.get('https://coalesce-sos6.onrender.com/dummyRoute/always-up');
     console.log(`Job executed at ${new Date().toISOString()}. 
-      Status code 1: ${responseofJobQuest.status}, Status code 2: ${selfResponse.status}`), Status code 3: ${responseofCoalesce};
+      Status code 1: ${responseofJobQuest.status}, Status code 2: ${selfResponse.status}, Status code 3: ${responseofCoalesce.status}`);
   } catch (error) {
     console.error(`Error occurred: ${error.message}`);
   }
